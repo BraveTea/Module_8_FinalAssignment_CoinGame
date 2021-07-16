@@ -36,8 +36,14 @@ while gameBoard != [[0,0,0],[0,0,0],[0,0,0]]:
     break  #this is just a simple out to quit the game whilst testing
   playerChoice2 = int(input("choose coordinate 2: "))
 
-  if gameBoard[playerChoice1][playerChoice2] == 1:
-    #gameBoard[playerChoice1][playerChoice2] = 0
+  coinChosen = gameBoard[playerChoice1][playerChoice2] 
+  up = gameBoard[playerChoice1-1][playerChoice2] 
+  #down = gameBoard[playerChoice1+1][playerChoice2] 
+  #left = gameBoard[playerChoice1][playerChoice2-1] 
+  #right = gameBoard[playerChoice1][playerChoice2+1]
+
+  if coinChosen == 1:
+    gameBoard[playerChoice1][playerChoice2] = 0
     gameBoard[playerChoice1-1][playerChoice2] = 0 #this is a start, it doesnt fully work yet because it will sort of go out of bounds and then weirdly pick a wrong coordinate to change (probably a Python failsafe or something)
   else:
     gameBoard[playerChoice1][playerChoice2] = 1
