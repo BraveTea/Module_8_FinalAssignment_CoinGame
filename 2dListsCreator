@@ -1,0 +1,10 @@
+rows = []
+cols = []
+
+boardSize = 3
+
+for i in range(boardSize):
+  for j in range(boardSize):
+    cols.append(1)
+  rows.append(cols)
+

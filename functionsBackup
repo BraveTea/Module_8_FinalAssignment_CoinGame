@@ -1,0 +1,20 @@
+#-----------flipCoin()-----------
+
+coinState = True
+
+def flipCoin():
+  global coinState
+  if coinState == True:
+    coinState = False
+    return coinState
+  elif coinState == False:
+    coinState = True
+    return coinState
+
+#-------------------------------
+
+
+
+
+
+
